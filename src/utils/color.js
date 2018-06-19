@@ -1,6 +1,4 @@
-/**
- * Created by 叶子 on 2017/8/23.
- */
+
 export default {
     theme: '#D43C33',
     backgroundColor: '#FBFCFE',

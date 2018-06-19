@@ -1,7 +1,12 @@
 import React, { PureComponent } from 'react';
 import { Text, TouchableOpacity, StyleSheet, View } from 'react-native';
+import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view'
 import Icon from 'react-native-vector-icons/Ionicons';
 import { screen, color } from '../../utils';
+import MainScene from '../../components/MainScene'
+import PlaylistScene from '../../components/PlaylistScene'
+import RadioScene from '../../components/RadioScene'
+import TopScene from '../../components/TopScene'
 
 class DiscoverMusic extends PureComponent {
     static navigationOptions = ({ navigation }) => ({
@@ -22,10 +27,27 @@ class DiscoverMusic extends PureComponent {
         this.state = {  }
     }
     render() { 
+        const types = [
+            {title: '个性推荐', component: MainScene},
+            {title: '歌单', component: PlaylistScene},
+            {title: '主播电台', component: RadioScene},
+            {title: '排行榜', component: TopScene},
+        ];
+        
         return ( 
-            <View>
-                <Text>这是发现音乐</Text>
-            </View>
+            <ScrollableTabView
+                style={{flex: 1, backgroundColor: '#FBFCFE'}}
+                tabBarBackgroundColor="#ffffff"
+                tabBarActiveTextColor="#D43C33"
+                tabBarInactiveTextColor="#000000"
+                tabBarUnderlineStyle={{backgroundColor: '#D43C33'}}
+                renderTabBar={() => <DefaultTabBar />}
+            >
+            { types.map((v, i) => {
+                const Component = v.component;
+                return <Component key={i} tabLabel={v.title} navigation={this.props.navigation} />
+            })}
+            </ScrollableTabView>
          )
     }
 }

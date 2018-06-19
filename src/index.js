@@ -4,16 +4,15 @@ import { Provider } from 'react-redux'
 import App from './containers/app'
 import SplashScreen from 'react-native-splash-screen'
 import { createStore, applyMiddleware, compose } from 'redux';
-import rootReducer from './reducers/index'
+import reducer from './redux/reducer';
 import thunk from 'redux-thunk'
 
-const store = createStore(rootReducer, compose(
-    applyMiddleware(thunk),
-    window.devToolsExtension?window.devToolsExtension():f=>f
-));
+const store = createStore(reducer);
+console.log(store.getState());
+
 export default class AppSplash extends PureComponent{
     componentDidMount() {
-        // SplashScreen.hide()
+        SplashScreen.hide()
     }
     render(){
         return (
