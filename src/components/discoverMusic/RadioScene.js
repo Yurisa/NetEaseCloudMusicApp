@@ -1,9 +1,9 @@
 
 import React, { PureComponent } from 'react';
 import { Text, FlatList } from 'react-native';
-import { DJPROGRAM_PERSONALIZED } from '../api';
+import { DJPROGRAM_PERSONALIZED } from '../../api';
 import ListContainer from './ListContainer';
-import { Spin } from '../widgets';
+import { Spin } from '../../widgets';
 
 class RadioScene extends PureComponent {
     state = {
@@ -41,7 +41,7 @@ class RadioScene extends PureComponent {
                 data={datas}
                 refreshing={refreshing}
                 onRefresh={this.fetchData}
-                keyExtractor={(item, index) => index}
+                keyExtractor={(item, index) => index.toString()}
                 // ListHeaderComponent={this.renderHeader}
                 renderItem={this.renderItem}
                 ListFooterComponent={() => <Text style={{textAlign: 'center', padding: 10, transform: [{scale: 0.857143}]}}>已加载完全部数据</Text>}

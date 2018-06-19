@@ -4,8 +4,8 @@
 import React, { PureComponent } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Container from './Container';
-import { screen } from '../utils';
-import { GridItem, TextTool } from '../widgets';
+import { screen } from '../../utils';
+import { GridItem, TextTool } from '../../widgets';
 
 const { H3 } = TextTool;
 

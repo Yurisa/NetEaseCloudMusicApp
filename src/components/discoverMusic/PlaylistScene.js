@@ -2,10 +2,10 @@
 import React, { PureComponent } from 'react';
 import { Text, FlatList, View, TouchableOpacity, StyleSheet } from 'react-native';
 import PlaylistHeader from './PlaylistHeader';
-import { screen, color } from '../utils';
-import { TextTool } from '../widgets';
+import { screen, color } from '../../utils';
+import { TextTool } from '../../widgets';
 import ListContainer from './ListContainer';
-import { PLAYLIST_HIGHQUALITY } from '../api';
+import { PLAYLIST_HIGHQUALITY } from '../../api';
 
 const { Normal } = TextTool;
 
@@ -16,14 +16,6 @@ class PlaylistScene extends PureComponent {
                 type: 'mv',
                 title: '推荐MV',
                 data: [],
-                // data: [{title: '给大家的歌', subTitle: '鹿先森乐队', image: require('../imgs/img/slider4.jpg'), width: 0.49},
-                //     {title: '英雄归来', subTitle: 'PG One', image: require('../imgs/img/19074327718953837.jpg'), width: 0.49},
-                //     {title: '清白之年', subTitle: '朴树', image: require('../imgs/img/109951162819638071.jpg'), width: 0.49},
-                //     {title: 'Papillon', subTitle: '王嘉尔 - (Jackson of GOT7)', image: require('../imgs/img/109951163013685863.jpg'), width: 0.49},
-                //     {title: '给大家的歌', subTitle: '鹿先森乐队', image: require('../imgs/img/slider4.jpg'), width: 0.49},
-                //     {title: '英雄归来', subTitle: 'PG One', image: require('../imgs/img/19074327718953837.jpg'), width: 0.49},
-                //     {title: '清白之年', subTitle: '朴树', image: require('../imgs/img/109951162819638071.jpg'), width: 0.49},
-                //     {title: 'Papillon', subTitle: '王嘉尔 - (Jackson of GOT7)', image: require('../imgs/img/109951163013685863.jpg'), width: 0.49},]
             },
         ],
         headerData: {},
@@ -82,7 +74,7 @@ class PlaylistScene extends PureComponent {
                 data={dataList}
                 refreshing={refreshing}
                 onRefresh={this.requestData}
-                keyExtractor={(item, index) => index}
+                keyExtractor={(item, index) => index.toString()}
                 ListHeaderComponent={this.renderHeader}
                 renderItem={this.renderItem}
                 ListFooterComponent={() => <Text style={{textAlign: 'center', padding: 10, transform: [{scale: 0.857143}]}}>已加载完全部数据</Text>}

@@ -8,7 +8,7 @@ export default class Splash extends PureComponent{
     }
     toMain = () => {
         console.log("main");
-        this.props.navigation.navigate('Main')
+        this.props.navigation.navigate('MainNavigator')
     }
     render(){
         return (

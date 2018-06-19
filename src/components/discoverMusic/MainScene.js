@@ -1,10 +1,10 @@
 
 import React, { PureComponent } from 'react';
 import { Text, View, FlatList, ListView } from 'react-native';
-import { IconMenu, Separator, BasicSwiper, ImageSWiper, GridItem } from '../widgets';
-import { screen } from '../utils';
+import { IconMenu, Separator, BasicSwiper, ImageSWiper, GridItem } from '../../widgets';
+import { screen } from '../../utils';
 import ListContainer from './ListContainer';
-import { PERSONALIZED, PERSONALIZED_PRIVATECONTENT, PERSONALIZED_NEWSONG, PERSONALIZED_MV, BANNER } from '../api';
+import { PERSONALIZED, PERSONALIZED_PRIVATECONTENT, PERSONALIZED_NEWSONG, PERSONALIZED_MV, BANNER } from '../../api';
 
 class MainScene extends PureComponent {
     state = {
@@ -84,7 +84,7 @@ class MainScene extends PureComponent {
                     data={dataList}
                     refreshing={refreshing}
                     onRefresh={this.requestData}
-                    keyExtractor={(item, index) => index}
+                    keyExtractor={(item, index) => index.toString()}
                     ListHeaderComponent={this.renderHeader}
                     renderItem={this.renderItem}
                     ListFooterComponent={() => <Text style={{textAlign: 'center', padding: 10, transform: [{scale: 0.857143}]}}>已加载完全部数据</Text>}

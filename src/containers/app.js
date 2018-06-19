@@ -6,6 +6,10 @@ import Account from './Account'
 import DiscoverMusic from './DiscoverMusic'
 import Friends from './Friends'
 import MyMusic from './MyMusic'
+import PlayerScene from '../components/player/PlayerScene';
+import { ModalRoute } from '../widgets';
+import Player from '../components/player/Player';
+import { DetailScene, MvDetail, UserDetail, DjDetail } from '../containers/Detail';
 
 const TabNavContainer = TabNavigator(
 {
@@ -62,12 +66,39 @@ const TabNavContainer = TabNavigator(
     }
 }
 )
+const Navigator = StackNavigator(
+    {
+        Tab: { screen: TabNavContainer},
+        Detail: { screen: DetailScene},
+        Player: { screen: PlayerScene},
+        MvDetail: {screen: MvDetail},
+        UserDetail: {screen: UserDetail},
+        DjDetail: {screen: DjDetail},
+    },
+    {
+        navigationOptions: {
+            headerBackTitle: '返回',
+            headerTintColor: '#333333',
+            showIcon: true
+        }
+    }
+);
+
+
+
 export default () => {
 
-    const App = StackNavigator({
-        Splash:{screen: Splash},
-        Main:{screen: TabNavContainer}
-    })
-
+    const App = StackNavigator(
+        {
+            Splash:{screen: Splash },
+            MainNavigator: { screen: Navigator },
+            ModalMenu: { screen: ModalRoute},
+        },
+        {
+            mode: 'modal',
+            headerMode: 'none',
+        }
+    );
+    
     return <App/>
 }

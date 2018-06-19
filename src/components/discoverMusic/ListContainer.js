@@ -3,8 +3,8 @@
  */
 import React, { PureComponent } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { TextTool, GridItem } from '../widgets';
-import { color } from '../utils';
+import { TextTool, GridItem } from '../../widgets';
+import { color } from '../../utils';
 
 const { H3 } = TextTool;
 

@@ -3,10 +3,10 @@ import { Text, TouchableOpacity, StyleSheet, View } from 'react-native';
 import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view'
 import Icon from 'react-native-vector-icons/Ionicons';
 import { screen, color } from '../../utils';
-import MainScene from '../../components/MainScene'
-import PlaylistScene from '../../components/PlaylistScene'
-import RadioScene from '../../components/RadioScene'
-import TopScene from '../../components/TopScene'
+import MainScene from '../../components/discoverMusic/MainScene'
+import PlaylistScene from '../../components/discoverMusic/PlaylistScene'
+import RadioScene from '../../components/discoverMusic/RadioScene'
+import TopScene from '../../components/discoverMusic/TopScene'
 
 class DiscoverMusic extends PureComponent {
     static navigationOptions = ({ navigation }) => ({

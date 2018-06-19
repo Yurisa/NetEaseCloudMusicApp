@@ -4,8 +4,8 @@
 import React, { PureComponent } from 'react';
 import { View, StyleSheet, Image, } from 'react-native';
 import normalizeColor from 'normalizeColor';
-import { screen, color } from '../utils';
-import { TextTool } from '../widgets';
+import { screen, color } from '../../utils';
+import { TextTool } from '../../widgets';
 
 const { H2, H3, Tip  } = TextTool;
 
