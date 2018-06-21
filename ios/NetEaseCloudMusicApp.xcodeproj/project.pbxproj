@@ -40,6 +40,12 @@
 		2DF9D3B50F7346B3A1DDB1F1 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0B96F15FCD94F94B2652A91 /* SimpleLineIcons.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		603B7F3223F048A3943B6529 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5155A00A9F4B4DACA3E77B /* Foundation.ttf */; };
+		6B7BE56E20DA45EA0097A609 /* PushNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BE53920DA45E70097A609 /* PushNative.m */; };
+		6B7BE56F20DA45EA0097A609 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BE56520DA45E80097A609 /* LoginController.m */; };
+		6B7BE57020DA45EA0097A609 /* NSArray+HJImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BE56820DA45E90097A609 /* NSArray+HJImages.m */; };
+		6B7BE57120DA45EA0097A609 /* HTTPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BE56A20DA45E90097A609 /* HTTPHelper.m */; };
+		6B7BE57220DA45EA0097A609 /* login_bg_gif_01.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6B7BE56B20DA45E90097A609 /* login_bg_gif_01.gif */; };
+		6B7BE57320DA45EA0097A609 /* plistHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BE56C20DA45E90097A609 /* plistHelper.m */; };
 		6B824A8120D9190E00D2DEBC /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B824A6820D918D900D2DEBC /* libRCTVideo.a */; };
 		77C479C52CA34B7A9B754409 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFD384393A744635A10DFF8F /* EvilIcons.ttf */; };
 		7D0E6A5F804044BC89D314AB /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA16C582A1404E57ADDBE5A5 /* Entypo.ttf */; };
@@ -387,6 +393,17 @@
 		4912831AEAC0493E96457298 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		5B5155A00A9F4B4DACA3E77B /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		6B7BE53920DA45E70097A609 /* PushNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PushNative.m; path = NetEaseCloudMusicApp/PushNative.m; sourceTree = "<group>"; };
+		6B7BE56320DA45E80097A609 /* HTTPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPHelper.h; path = NetEaseCloudMusicApp/HTTPHelper.h; sourceTree = "<group>"; };
+		6B7BE56420DA45E80097A609 /* plistHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = plistHelper.h; path = NetEaseCloudMusicApp/plistHelper.h; sourceTree = "<group>"; };
+		6B7BE56520DA45E80097A609 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = NetEaseCloudMusicApp/LoginController.m; sourceTree = "<group>"; };
+		6B7BE56720DA45E90097A609 /* NSArray+HJImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HJImages.h"; sourceTree = "<group>"; };
+		6B7BE56820DA45E90097A609 /* NSArray+HJImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HJImages.m"; sourceTree = "<group>"; };
+		6B7BE56920DA45E90097A609 /* PushNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushNative.h; path = NetEaseCloudMusicApp/PushNative.h; sourceTree = "<group>"; };
+		6B7BE56A20DA45E90097A609 /* HTTPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPHelper.m; path = NetEaseCloudMusicApp/HTTPHelper.m; sourceTree = "<group>"; };
+		6B7BE56B20DA45E90097A609 /* login_bg_gif_01.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = login_bg_gif_01.gif; path = NetEaseCloudMusicApp/login_bg_gif_01.gif; sourceTree = "<group>"; };
+		6B7BE56C20DA45E90097A609 /* plistHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = plistHelper.m; path = NetEaseCloudMusicApp/plistHelper.m; sourceTree = "<group>"; };
+		6B7BE56D20DA45EA0097A609 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = NetEaseCloudMusicApp/LoginController.h; sourceTree = "<group>"; };
 		6B824A5120D918D900D2DEBC /* RCTVideo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVideo.xcodeproj; path = "../node_modules/react-native-video/ios/RCTVideo.xcodeproj"; sourceTree = "<group>"; };
 		6F0AA9B43D404562B405D2CB /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -564,6 +581,16 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				6B7BE56620DA45E90097A609 /* Bases */,
+				6B7BE56320DA45E80097A609 /* HTTPHelper.h */,
+				6B7BE56A20DA45E90097A609 /* HTTPHelper.m */,
+				6B7BE56B20DA45E90097A609 /* login_bg_gif_01.gif */,
+				6B7BE56D20DA45EA0097A609 /* LoginController.h */,
+				6B7BE56520DA45E80097A609 /* LoginController.m */,
+				6B7BE56420DA45E80097A609 /* plistHelper.h */,
+				6B7BE56C20DA45E90097A609 /* plistHelper.m */,
+				6B7BE56920DA45E90097A609 /* PushNative.h */,
+				6B7BE53920DA45E70097A609 /* PushNative.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
@@ -610,6 +637,16 @@
 				5E9157351DD0AC6500FF2AA8 /* libRCTAnimation.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6B7BE56620DA45E90097A609 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				6B7BE56720DA45E90097A609 /* NSArray+HJImages.h */,
+				6B7BE56820DA45E90097A609 /* NSArray+HJImages.m */,
+			);
+			name = Bases;
+			path = NetEaseCloudMusicApp/Bases;
 			sourceTree = "<group>";
 		};
 		6B824A5220D918D900D2DEBC /* Products */ = {
@@ -1215,6 +1252,7 @@
 				603B7F3223F048A3943B6529 /* Foundation.ttf in Resources */,
 				F7A38468EC144FE8B2C8341A /* Ionicons.ttf in Resources */,
 				F18F5022641B47B9ADC72618 /* MaterialCommunityIcons.ttf in Resources */,
+				6B7BE57220DA45EA0097A609 /* login_bg_gif_01.gif in Resources */,
 				B10B8EB543F644CD932D7142 /* MaterialIcons.ttf in Resources */,
 				FE06B23AEEE5482F9C5D45DB /* Octicons.ttf in Resources */,
 				2DF9D3B50F7346B3A1DDB1F1 /* SimpleLineIcons.ttf in Resources */,
@@ -1283,7 +1321,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B7BE57020DA45EA0097A609 /* NSArray+HJImages.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				6B7BE56F20DA45EA0097A609 /* LoginController.m in Sources */,
+				6B7BE57120DA45EA0097A609 /* HTTPHelper.m in Sources */,
+				6B7BE57320DA45EA0097A609 /* plistHelper.m in Sources */,
+				6B7BE56E20DA45EA0097A609 /* PushNative.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

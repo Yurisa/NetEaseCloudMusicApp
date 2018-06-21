@@ -6,6 +6,8 @@
  */
 
 #import "AppDelegate.h"
+#import "plistHelper.h"
+#import "LoginController.h"
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -28,7 +30,22 @@
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
-  self.window.rootViewController = rootViewController;
+//  self.window.rootViewController = rootViewController;
+  // 初始化Nav
+  _nav = [[UINavigationController alloc]initWithRootViewController:rootViewController];
+  NSString* res = [plistHelper getPlist];
+  NSLog(@"res - %@", res);
+  _nav.navigationBarHidden = YES;
+  if([res isEqualToString:@"0"]){
+    LoginController *one = [[LoginController alloc]init];
+    [self.nav pushViewController:one animated:YES];
+  }
+ 
+  
+  self.window.rootViewController = _nav;
+  
+  
+  
   [self.window makeKeyAndVisible];
   [SplashScreen show];
   return YES;
