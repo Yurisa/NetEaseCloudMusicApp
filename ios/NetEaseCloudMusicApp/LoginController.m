@@ -30,7 +30,7 @@
   
   UILabel *label = [UILabel new];
   [label setFrame:CGRectMake(SCREEN_WIDTH / 2 - 120, 20, 240, 38)];
-  label.text = @"网易云";
+  label.text = @"网易云音乐";
   label.textColor = [UIColor whiteColor];
   label.textAlignment = NSTextAlignmentCenter;
   
@@ -117,25 +117,25 @@
   [mima resignFirstResponder];
 //  [self alertx: @"123"];
 //  [plistHelper setPlist:@"1"];
-  dispatch_async(dispatch_get_main_queue(), ^(void){
-            [self.navigationController popToRootViewControllerAnimated:YES];
-          });
+//  dispatch_async(dispatch_get_main_queue(), ^(void){
+//            [self.navigationController popToRootViewControllerAnimated:YES];
+//          });
 
-//  NSDictionary *params = @{@"userName":zhanghu.text,@"password":mima.text  };
-//  [HTTPHelper postRequestByServiceUrl:@"http://localhost:3000" andApi:@"/sign" andParams:params andCallBack:^(id obj) {
-//    NSString *status = [NSString stringWithFormat:@"%@", [obj objectForKey:@"success"]];
-//    NSString *msg = [obj objectForKey:@"msg"];
-//    if([status isEqualToString:@"0"]){
-//      dispatch_async(dispatch_get_main_queue(), ^(void){
-//        [self alertx:msg];
-//      });
-//    }else {
-//      dispatch_async(dispatch_get_main_queue(), ^(void){
-//        [plistHelper setPlist:@"1"];
-//        [self.navigationController popToRootViewControllerAnimated:YES];
-//      });
-//    }
-//  }];
+  NSDictionary *params = @{@"name":zhanghu.text,@"pwd":mima.text  };
+  [HTTPHelper postRequestByServiceUrl:@"http://localhost:3000" andApi:@"/user/login" andParams:params andCallBack:^(id obj) {
+    NSString *status = [NSString stringWithFormat:@"%@", [obj objectForKey:@"code"]];
+    NSString *msg = [obj objectForKey:@"msg"];
+    if([status isEqualToString:@"1"]){
+      dispatch_async(dispatch_get_main_queue(), ^(void){
+        [self alertx:msg];
+      });
+    }else {
+      dispatch_async(dispatch_get_main_queue(), ^(void){
+        [plistHelper setPlist:@"1"];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+      });
+    }
+  }];
   
 }
 

@@ -36,10 +36,10 @@
   NSString* res = [plistHelper getPlist];
   NSLog(@"res - %@", res);
   _nav.navigationBarHidden = YES;
-  if([res isEqualToString:@"0"]){
+//  if([res isEqualToString:@"0"]){
     LoginController *one = [[LoginController alloc]init];
     [self.nav pushViewController:one animated:YES];
-  }
+//  }
  
   
   self.window.rootViewController = _nav;

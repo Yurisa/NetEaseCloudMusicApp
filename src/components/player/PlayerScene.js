@@ -84,14 +84,8 @@ class PlayerScene extends PureComponent {
                     const res = await fetch(SONG_DETAIL + id);
                     const detail = (await res.json()).songs[0];
                     console.log(detail);
-                    // 歌词
-                    // const lyRes = await fetch(SONG_LYRIC + id);
-                    // const lyric = (await lyRes.json()).lrc.lyric;
-                    // const lyricArr = lyric.split(/\n/).map(v => v.replace(/\[.*\]/g, ''));
                     this.setState({
                         detail,
-                        // lyric,
-                        // lyricArr
                     });
                     this.props.navigation.setParams({name: detail.name, artists: detail.ar.map(v => v.name).join('、')});
                     this.circling();    // 旋转图片

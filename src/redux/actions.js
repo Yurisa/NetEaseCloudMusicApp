@@ -1,6 +1,4 @@
-/**
- * Created by 叶子 on 2017/10/4.
- */
+
 
 export const TYPE = {
     SET_PLAY_ID: 'SET_PLAY_ID',

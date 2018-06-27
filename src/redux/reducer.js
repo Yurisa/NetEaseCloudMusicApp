@@ -1,6 +1,4 @@
-/**
- * Created by 叶子 on 2017/10/4.
- */
+
 import { combineReducers } from 'redux';
 import { TYPE } from './actions';
 
